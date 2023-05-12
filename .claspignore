@@ -1,0 +1,4 @@
+
+# ignore even valid files if in…
+.git/**
+node_modules/**
