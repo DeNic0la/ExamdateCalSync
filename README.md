@@ -7,6 +7,8 @@ The Events are Filtered, only the Exams & Projects will endup in the Target cale
 I personally only want the Exam entries in my Calendar and am bothered by the repetitive entries from the normal lessons.
 
 ## Disclaimer
+You can now Choose which events to sync to your Calendar, rendering this tool useless.
+This will DELETE ALL EVENTS in you target Calendar, make sure to create a new (empty) Calendar for this
 I don't guarantee that this will work. You need a Google Account to run this project in.
 I don't guarantee anything.
 You will need some computer know-how.
