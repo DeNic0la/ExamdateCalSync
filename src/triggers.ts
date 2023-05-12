@@ -1,6 +1,6 @@
 export function createTimeDrivenTriggers(){
     deleteAllTriggers();
-    ScriptApp.newTrigger('syncCallback').timeBased().everyHours(12).create();
+    ScriptApp.newTrigger('sync').timeBased().everyHours(12).create();
 }
 export function deleteAllTriggers(){
     const triggers = ScriptApp.getProjectTriggers();

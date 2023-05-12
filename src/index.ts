@@ -1,13 +1,22 @@
-import {syncCallback} from "./sync";
 import {createTimeDrivenTriggers} from "./triggers";
-import {checkConfig, getUniqueEvents, logAllCalIds} from "./calendar";
+import {checkConfig, getUniqueEvents, logAllCalIds, replaceTargetEvents} from "./calendar";
+import {mapToEntry, removeClassPrefix, removeGenericEvents} from "./transformer";
+import {getConfigForKeyOrFallback} from "./config";
 
 checkConfig()
-
 createTimeDrivenTriggers();
-syncCallback();
 if (process.env.DO_CAL_LOG !== "false"){
     logAllCalIds()
 }
 
-getUniqueEvents().forEach(value => console.log(value.getTitle()))
+function sync(){
+    const events = getUniqueEvents();
+    let entries = mapToEntry(events);
+    if (getConfigForKeyOrFallback("REQUIRE_CLASSNAME_IN_EVENT", false)){
+        entries = removeGenericEvents(entries);
+    }
+    if (getConfigForKeyOrFallback("REMOVE_CLASSNAME_FROM_EVENT",false)){
+        entries = removeClassPrefix(entries)
+    }
+    replaceTargetEvents(entries);
+}
