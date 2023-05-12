@@ -1,6 +1,7 @@
 import { babel } from "@rollup/plugin-babel";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import copy from 'rollup-plugin-copy'
+import dotenv from "rollup-plugin-dotenv"
 
 
 const extensions = [".ts", ".js"];
@@ -26,6 +27,7 @@ export default {
         format: "cjs",
     },
     plugins: [
+        dotenv(),
         preventTreeShakingPlugin(),
         nodeResolve({
             extensions,

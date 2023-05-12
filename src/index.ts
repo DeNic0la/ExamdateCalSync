@@ -1,12 +1,11 @@
 import {syncCallback} from "./sync";
+import {createTimeDrivenTriggers} from "./triggers";
+import {checkConfig, logAllCalIds} from "./calendar";
 
-function createTimeDrivenTriggers(){
-    ScriptApp.newTrigger('syncCalEvents').timeBased().everyHours(12).create();
-}
+checkConfig()
 
-/**
- * Proxy Function for Trigger
- */
-function syncCalEvents(){
-    syncCallback();
+createTimeDrivenTriggers();
+syncCallback();
+if (process.env.DO_CAL_LOG !== "false"){
+    logAllCalIds()
 }

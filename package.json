@@ -7,7 +7,8 @@
     "deploy": "run-s build push"
   },
   "dependencies": {
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "rollup-plugin-dotenv": "^0.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -19,6 +20,7 @@
     "@rollup/plugin-node-resolve": "^11.0.1",
     "@types/google-apps-script": "^1.0.20",
     "@types/node": "^12.19.9",
+    "dotenv": "^16.0.3",
     "npm-run-all": "^4.1.5",
     "rollup": "^2.35.1",
     "rollup-plugin-copy": "^3.4.0",
