@@ -37,7 +37,7 @@ Go to [https://script.google.com/home/usersettings](https://script.google.com/ho
 Install NPM and clone the git repo. If you cant figure out how to do this with the help of google, its time to abort now.
 open the project and run `npm i`
 and `npm install -g @google/clasp`
-then run `clasp login` and login with your Google account
+then run `npx clasp login` and login with your Google account
 
 copy the `.env.example` file and rename it to `.env`
 
