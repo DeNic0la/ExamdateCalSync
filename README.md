@@ -3,12 +3,16 @@
 ## Purpose
 This tool was Developed to Copy events modify them and then insert them into another Calendar.
 The Source-Events are provided by Schulnetz, every student can Import those URLs into their Calendar.
-The Events are Filtered, only the Exams & Projects will endup in the Target calendar.
+The Events are Filtered, only the Exams & Projects will end up in the Target calendar.
 I personally only want the Exam entries in my Calendar and am bothered by the repetitive entries from the normal lessons.
 
 ## Disclaimer
-You can now Choose which events to sync to your Calendar, rendering this tool useless.
-This will DELETE ALL EVENTS in you target Calendar, make sure to create a new (empty) Calendar for this
+> [!IMPORTANT]
+> You can now Choose which events to sync to your Calendar, rendering this tool useless.
+
+> [!CAUTION]
+> This will DELETE ALL EVENTS in you target Calendar, make sure to create a new (empty) Calendar for this.
+
 I don't guarantee that this will work. You need a Google Account to run this project in.
 I don't guarantee anything.
 You will need some computer know-how.
@@ -54,12 +58,12 @@ Everything before the `|` is the name, everything after is the ID. You will need
 ### Config
 Open the `.env` file and fill in the Values, here are some explanations:
 (write all values without quotes)
-SOURCE_CAL_ID: the Calendar id from the calendar you importet over the URL (ends with @import.calendar.google.com)
+SOURCE_CAL_ID: the Calendar id from the calendar you imported over the URL (ends with @import.calendar.google.com)
 TARGET_CAL_ID: the Calendar id of the Calendar you want the events to end up in
-DO_CAL_LOG: whether or not to show the calendar names and ids in log. i recomend "false"
+DO_CAL_LOG: whether to show the calendar names and ids in log. I recommend "false"
 MONTHS_IN_ADVANCE: Moths in advance to sync events for (optional)
 NUMBER_OF_EVENTS_BEFORE_SKIP: the Amount of "Same-Name" entries allowed (optional)
-REQUIRE_CLASSNAME_IN_EVENT: if "true" removes all holidays etc. recomend "false"
+REQUIRE_CLASSNAME_IN_EVENT: if "true" removes all holidays etc. recommend "false"
 REMOVE_CLASSNAME_FROM_EVENT: Removes the Classname from the Eventname
 CLASS_NAME: Your classname, this is a part of the Calendar Title in the Source calendar. example: "BMLT20" (required if `REQUIRE_CLASSNAME_IN_EVENT` or `REMOVE_CLASSNAME_FROM_EVENT` is true )
 
